@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080b12">
+  <meta name="description" content="MG·BGC — Venture building and growth partnerships for ambitious businesses.">
+  <title>MG·BGC | Venture Building & Growth</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#080b12;--panel:#0e1420;--panel2:#111a2a;--text:#f4f7fc;--muted:#a2adbf;--blue:#86aaff;--line:rgba(255,255,255,.11);--max:1160px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:"DM Sans",sans-serif;line-height:1.6}
+    a{color:inherit;text-decoration:none}.wrap{width:min(var(--max),calc(100% - 48px));margin:auto}
+    .nav{height:82px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+    .brand{font:800 21px Manrope,sans-serif;letter-spacing:.16em}.brand span{color:var(--blue)}
+    .links{display:flex;gap:30px;align-items:center;color:#c4ccda;font-size:13px}.links a:hover{color:white}
+    .button{display:inline-flex;align-items:center;justify-content:center;padding:13px 20px;border:1px solid rgba(134,170,255,.55);border-radius:5px;background:linear-gradient(135deg,#8eafff,#6388df);color:#08101f;font-weight:700;font-size:13px;transition:.2s}
+    .button:hover{transform:translateY(-2px);filter:brightness(1.08)}
+    .menu{display:none;background:none;border:0;color:white;font-size:25px}
+    .hero{padding:112px 0 100px;position:relative;overflow:hidden}
+    .hero:after{content:"";position:absolute;width:620px;height:620px;border-radius:50%;right:-180px;top:-160px;background:radial-gradient(circle,rgba(72,112,204,.22),transparent 68%);pointer-events:none}
+    .eyebrow{color:var(--blue);font-size:11px;letter-spacing:.28em;text-transform:uppercase;font-weight:700}
+    h1,h2,h3{font-family:Manrope,sans-serif;line-height:1.12;margin:0}
+    h1{font-size:clamp(44px,7vw,82px);max-width:850px;letter-spacing:-.055em;margin:22px 0}
+    h1 em{font-style:normal;color:var(--blue)}
+    .lead{font-size:18px;color:#b4bfd0;max-width:650px;margin:0 0 32px}
+    .hero-actions{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+    .textlink{font-size:13px;color:#d3dbea;padding:12px 4px}
+    .metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:80px;max-width:760px}
+    .metric{background:rgba(8,11,18,.88);padding:22px 25px}.metric strong{display:block;font:700 20px Manrope}.metric span{font-size:11px;color:var(--muted);letter-spacing:.1em;text-transform:uppercase}
+    section{padding:88px 0;border-top:1px solid var(--line)}.section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:38px}
+    h2{font-size:clamp(32px,4vw,48px);letter-spacing:-.04em;max-width:600px}.section-intro{color:var(--muted);max-width:390px;font-size:14px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .card{background:linear-gradient(145deg,var(--panel2),var(--panel));border:1px solid var(--line);padding:27px;min-height:210px}
+    .number{font-size:11px;color:var(--blue);letter-spacing:.18em}.card h3{font-size:20px;margin:22px 0 10px}.card p{margin:0;color:var(--muted);font-size:13px}
+    .sectors{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}.tag{padding:11px 15px;border:1px solid var(--line);border-radius:3px;color:#d1d9e7;font-size:12px;background:rgba(255,255,255,.025)}
+    .workgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .work{min-height:170px;padding:24px;background:#0b101a;border:1px solid var(--line);display:flex;flex-direction:column;justify-content:space-between}
+    .work small{font-size:10px;color:var(--blue);letter-spacing:.2em;text-transform:uppercase}.work strong{font:800 27px Manrope;letter-spacing:-.04em}.work span{font-size:12px;color:var(--muted)}
+    .statement{background:linear-gradient(120deg,#111c31,#0d1421);border:1px solid rgba(134,170,255,.2);padding:52px;display:flex;justify-content:space-between;align-items:center;gap:30px}
+    .statement h2{max-width:650px}.statement p{color:var(--muted);font-size:14px;max-width:620px;margin:17px 0 0}
+    .contact{display:grid;grid-template-columns:1.2fr .8fr;gap:35px;align-items:center}
+    .contact-box{padding:28px;background:var(--panel);border:1px solid var(--line)}.contact-box p{color:var(--muted);font-size:13px}
+    footer{padding:28px 0;color:#8793a7;font-size:11px;border-top:1px solid var(--line)}.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    @media(max-width:760px){.links{display:none;position:absolute;top:82px;left:0;right:0;background:#0c111b;padding:22px 24px;flex-direction:column;align-items:flex-start;z-index:5;border-bottom:1px solid var(--line)}.links.open{display:flex}.menu{display:block}.nav .button{display:none}.hero{padding:82px 0 70px}.metrics{margin-top:55px}.metric{padding:16px 12px}.metric strong{font-size:16px}.metric span{font-size:9px}.grid,.workgrid{grid-template-columns:1fr}.section-head,.contact{display:block}.section-intro{margin-top:18px}.statement{display:block;padding:30px}.statement .button{margin-top:25px}section{padding:65px 0}}
+  </style>
+</head>
+<body>
+  <header class="wrap nav">
+    <a class="brand" href="#">MG<span>·</span>BGC</a>
+    <nav class="links" id="links">
+      <a href="#about">About</a><a href="#services">What we do</a><a href="#sectors">Industries</a><a href="#work">Our network</a><a href="#contact">Contact</a>
+    </nav>
+    <a class="button" href="https://www.instagram.com/mg__business_g/" target="_blank" rel="noopener">Let's talk ↗</a>
+    <button class="menu" aria-label="Open menu" onclick="document.getElementById('links').classList.toggle('open')">☰</button>
+  </header>
+
+  <main>
+    <div class="wrap hero">
+      <div class="eyebrow">Venture building · Growth partnerships</div>
+      <h1>We build what’s <em>next.</em><br>We grow what matters.</h1>
+      <p class="lead">MG·BGC works alongside ambitious businesses to unlock opportunities, strengthen operations and turn bold ideas into sustainable growth.</p>
+      <div class="hero-actions">
+        <a class="button" href="#contact">Start a conversation ↗</a>
+        <a class="textlink" href="#services">Explore our approach ↓</a>
+      </div>
+      <div class="metrics">
+        <div class="metric"><strong>Build</strong><span>From idea to execution</span></div>
+        <div class="metric"><strong>Connect</strong><span>People, markets & capital</span></div>
+        <div class="metric"><strong>Grow</strong><span>Long-term value creation</span></div>
+      </div>
+    </div>
+
+    <section id="about"><div class="wrap">
+      <div class="section-head"><div><div class="eyebrow">01 / About MG·BGC</div><h2>A growth partner, not just an advisor.</h2></div>
+        <p class="section-intro">We bring strategic thinking and practical execution together—helping businesses move from ambition to measurable progress.</p></div>
+      <div class="grid">
+        <article class="card"><div class="number">01 — STRATEGY</div><h3>See the opportunity</h3><p>Clarify the vision, understand the market and identify the moves that can create meaningful momentum.</p></article>
+        <article class="card"><div class="number">02 — BUILD</div><h3>Make it happen</h3><p>Shape the business model, connect the right capabilities and support the journey from plan to launch.</p></article>
+        <article class="card"><div class="number">03 — SCALE</div><h3>Grow with purpose</h3><p>Develop partnerships, strengthen execution and pursue sustainable expansion into new opportunities.</p></article>
+      </div>
+    </div></section>
+
+    <section id="services"><div class="wrap">
+      <div class="section-head"><div><div class="eyebrow">02 / What we do</div><h2>Practical support for ambitious growth.</h2></div><p class="section-intro">Our work is shaped around each business, its stage and the opportunity in front of it.</p></div>
+      <div class="grid">
+        <article class="card"><div class="number">01</div><h3>Venture building</h3><p>Turning promising concepts into focused, market-ready ventures with a clear path forward.</p></article>
+        <article class="card"><div class="number">02</div><h3>Business growth</h3><p>Finding new routes to market, improving business performance and supporting expansion.</p></article>
+        <article class="card"><div class="number">03</div><h3>Strategic partnerships</h3><p>Connecting businesses with complementary partners, expertise and new commercial opportunities.</p></article>
+      </div>
+    </div></section>
+
+    <section id="sectors"><div class="wrap">
+      <div class="section-head"><div><div class="eyebrow">03 / Industries</div><h2>Across sectors. Focused on possibility.</h2></div><p class="section-intro">A cross-industry perspective helps us spot connections, transfer ideas and open new doors.</p></div>
+      <div class="sectors"><span class="tag">Fintech</span><span class="tag">Retail</span><span class="tag">Q-commerce</span><span class="tag">Delivery & logistics</span><span class="tag">Digital businesses</span><span class="tag">Emerging ventures</span></div>
+    </div></section>
+
+    <section id="work"><div class="wrap">
+      <div class="section-head"><div><div class="eyebrow">04 / Our network</div><h2>Better things happen together.</h2></div><p class="section-intro">Selected names and relationships featured on MG·BGC’s social profile.</p></div>
+      <div class="workgrid">
+        <div class="work"><small>Global partner · Venture building</small><strong>The Founders</strong><span>Europe</span></div>
+        <div class="work"><small>Growth partner · Fintech</small><strong>TELDA</strong><span>Fintech</span></div>
+        <div class="work"><small>Growth partner · Retail</small><strong>David & Jones</strong><span>Retail</span></div>
+        <div class="work"><small>Growth partner · Q-commerce</small><strong>Breadfast</strong><span>Q-commerce</span></div>
+        <div class="work"><small>Growth partner · Fintech</small><strong>Thndr</strong><span>Fintech</span></div>
+        <div class="work"><small>Growth partner · Delivery</small><strong>Rabbit</strong><span>Delivery</span></div>
+      </div>
+    </div></section>
+
+    <section><div class="wrap"><div class="statement">
+      <div><div class="eyebrow">The next chapter starts here</div><h2>Ready to turn your next big move into real progress?</h2><p>Tell us where you want to go. Let’s explore what we can build together.</p></div>
+      <a class="button" href="https://www.instagram.com/mg__business_g/" target="_blank" rel="noopener">Connect with MG·BGC ↗</a>
+    </div></div></section>
+
+    <section id="contact"><div class="wrap contact">
+      <div><div class="eyebrow">05 / Contact</div><h2>Let’s talk about growth.</h2><p class="section-intro">Have a venture, a challenge or a partnership idea? Get in touch and start the conversation.</p></div>
+      <div class="contact-box"><strong>MG·BGC — MG Business Growth Company</strong>
+        <p>For business inquiries, partnerships and collaboration opportunities, contact our team directly.</p>
+        <p><strong>Phone / WhatsApp:</strong><br><a href="https://wa.me/201151649060">+20 115 164 9060</a></p>
+        <p><strong>Email:</strong><br><a href="mailto:AHMEDBADRYMG@ICLOUD.COM">AHMEDBADRYMG@ICLOUD.COM</a></p>
+        <div class="hero-actions">
+          <a class="button" href="https://wa.me/201151649060" target="_blank" rel="noopener">WhatsApp us ↗</a>
+          <a class="textlink" href="mailto:AHMEDBADRYMG@ICLOUD.COM">Send an email ↗</a>
+        </div>
+        <p><a href="https://www.instagram.com/mg__business_g/" target="_blank" rel="noopener">Instagram: @mg__business_g ↗</a></p>
+      </div>
+    </div></section>
+  </main>
+  <footer><div class="wrap foot"><span>© <span id="year"></span> MG·BGC. All rights reserved.</span><span>Venture Building · Business Growth · Strategic Partnerships</span><span><a href="mailto:AHMEDBADRYMG@ICLOUD.COM">Email</a> · <a href="https://wa.me/201151649060">WhatsApp</a> · <a href="https://www.instagram.com/mg__business_g/" target="_blank" rel="noopener">@mg__business_g</a></span></div></footer>
+  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>
